@@ -1,0 +1,69 @@
+@import './resets';
+@import './variables';
+@import './functions';
+@import './header';
+@import './nav';
+@import './article';
+
+body {
+  background-color: $primary-color;
+  color: $text-color;
+  font-family: $font;
+  font-size: getSize('regular');
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    'topbar topbar'
+    'navbar content'
+    'footer footer';
+  grid-template-columns: 50px auto;
+  grid-template-rows: 50px auto 50px;
+}
+
+footer {
+  grid-area: footer;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 3s linear 0s 1 longFadeIn;
+}
+
+#arrow {
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+#arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.arrow-light-mode {
+  border-color: darken(white, 100%) !important;
+}
+
+.light-mode {
+  background-color: lighten($primary-color, 100%) !important;
+  color: darken($text-color, 100%) !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    grid-template-areas:
+      'topbar'
+      'navbar'
+      'content'
+      'footer';
+    grid-template-columns: auto;
+    grid-template-rows: 50px 60px auto 50px;
+  }
+}

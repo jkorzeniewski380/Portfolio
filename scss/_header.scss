@@ -1,0 +1,62 @@
+header {
+  position: sticky;
+  top: 0;
+  grid-area: topbar;
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  align-items: center;
+  padding: 1% 2% 0 2%;
+  transition: top 0.3s;
+  z-index: 999;
+  animation: 3s linear 0s 1 longFadeIn;
+  p {
+    letter-spacing: 4pt;
+    transition: all 0.5s linear;
+  }
+
+  p:hover {
+    color: blue;
+    transform: scale(1.1);
+  }
+
+  #logo {
+    transform: translateX(50px);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: inline;
+    margin: 10px;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+
+      img {
+        width: 30px;
+        transition: all 0.3s ease-out;
+      }
+      img:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  #theme-switch {
+    border: none;
+    text-decoration: none;
+    background-color: $primary-color;
+    color: $text-color;
+
+    cursor: pointer;
+  }
+  #theme-switch:hover {
+    text-decoration: line-through;
+    color: darken($text-color, 50%);
+    animation: strike 0.25s ease-out;
+  }
+}
