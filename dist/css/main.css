@@ -5,12 +5,12 @@
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
 }
 
 :root {
@@ -459,12 +459,16 @@ article p {
 
 article .content {
   opacity: 0;
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
 article .content_animated {
   opacity: 1;
+  -webkit-transform: none;
+          transform: none;
 }
 
 article .title {
@@ -472,12 +476,16 @@ article .title {
   font-size: 30px;
   padding: 8vh;
   opacity: 0;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
 article .title_animated {
   opacity: 1;
+  -webkit-transform: none;
+          transform: none;
 }
 
 article .subtitle {
@@ -486,14 +494,23 @@ article .subtitle {
 }
 
 article #home {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
 article #home #name {
-  display: inline-block;
-  float: none;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 10%;
 }
 
@@ -692,7 +709,6 @@ article #contact ul {
 article #contact ul li {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  display: inline-block;
   position: relative;
   margin: 0 10% 0 10%;
 }
@@ -723,21 +739,10 @@ article #contact ul li:hover span.icon-title {
 }
 
 @media only screen and (min-width: 1360px) {
-  article .content {
-    -webkit-transform: translateX(30px);
-            transform: translateX(30px);
-  }
-  article .content_animated {
-    -webkit-transform: none;
-            transform: none;
-  }
-  article .title {
-    -webkit-transform: translateX(-30px);
-            transform: translateX(-30px);
-  }
-  article .title_animated {
-    -webkit-transform: none;
-            transform: none;
+  article #home {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   article #home #name {
     margin: 10% 0 30% 10%;
@@ -751,10 +756,10 @@ article #contact ul li:hover span.icon-title {
   article #home #profile {
     display: block;
     border-radius: 50%;
-    float: right;
     padding-top: 5%;
     padding-right: 10%;
     width: 40%;
+    height: 40%;
   }
   article #projects #project-list li {
     margin: 30px;

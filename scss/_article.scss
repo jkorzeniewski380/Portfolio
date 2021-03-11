@@ -17,11 +17,13 @@ article {
 
   .content {
     opacity: 0;
+    transform: translateX(30px);
     transition: all 1s ease-out;
   }
 
   .content_animated {
     opacity: 1;
+    transform: none;
   }
 
   .title {
@@ -29,11 +31,13 @@ article {
     font-size: 30px;
     padding: 8vh;
     opacity: 0;
+    transform: translateX(-30px);
     transition: all 1s ease-out;
   }
 
   .title_animated {
     opacity: 1;
+    transform: none;
   }
 
   .subtitle {
@@ -42,12 +46,12 @@ article {
   }
 
   #home {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     width: 100%;
     #name {
-      display: inline-block;
-      float: none;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
       margin-top: 10%;
 
       h1 {
@@ -211,7 +215,6 @@ article {
 
       li {
         transition: all 0.3s ease;
-        display: inline-block;
         position: relative;
         margin: 0 10% 0 10%;
 
@@ -244,23 +247,9 @@ article {
 
 @media only screen and (min-width: 1360px) {
   article {
-    .content {
-      transform: translateX(30px);
-    }
-
-    .content_animated {
-      transform: none;
-    }
-
-    .title {
-      transform: translateX(-30px);
-    }
-
-    .title_animated {
-      transform: none;
-    }
-
     #home {
+      justify-content: space-between;
+
       #name {
         margin: 10% 0 30% 10%;
 
@@ -275,10 +264,10 @@ article {
       #profile {
         display: block;
         border-radius: 50%;
-        float: right;
         padding-top: 5%;
         padding-right: 10%;
         width: 40%;
+        height: 40%;
       }
     }
 
