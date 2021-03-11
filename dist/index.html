@@ -18,7 +18,7 @@
       <ul>
         <li><a href="https://www.facebook.com/kuba.korzeniewski.3/" target="_blank"><img src="./icons/facebook.webp" alt="F"></a></li>
         <li><a href="https://www.linkedin.com/in/jakub-korzeniewski-044154161/" target="_blank"><img src="./icons/in.webp" alt="In"></a></li>
-        <li><a href="https://github.com/jkorzeniewski380?tab=projects" target="_blank"><img src="./icons/github.webp" alt="GH"></a></li>
+        <li><a href="https://github.com/jkorzeniewski380?tab=repositories" target="_blank"><img src="./icons/github.webp" alt="GH"></a></li>
       </ul>
     </header>
 
@@ -34,28 +34,28 @@
       <div id="about">
         <h1 class="title">About me</h1>
         <div class="content">
-        <p>
-        I'm a first year Computer Science student at the University of Warsaw and a self-taught web developer currently located in Warsaw. I enjoy learning about new technologies and have passion for programming. I also love cycling, watching movies and playing on the piano.
-        </p>
-        <h1 class="subtitle">Technologies</h1>
-        <ul id="tech">
-          <li><i class="fab fa-html5 fa-2x"></i>
-            <span class="icon-title">HTML</span></li>
-          <li><i class="fab fa-css3-alt fa-2x"></i>
-            <span class="icon-title">CSS</span></li>
-          <li><i class="fab fa-sass fa-2x"></i>
-            <span class="icon-title">Sass</span></li>
-          <li><i class="fab fa-js-square fa-2x"></i>
-            <span class="icon-title">JavaScript</span></li>
-          <li><i class="fab fa-react fa-2x"></i>
-            <span class="icon-title">React.js</span></li>
-          <li><i class="fab fa-node fa-2x"></i>
-            <span class="icon-title">Node.js</span></li>
-          <li><i class="fab fa-python fa-2x"></i>
-            <span class="icon-title">Python</span></li>
-          <li><i class="fab fa-java fa-2x"></i>
-            <span class="icon-title">Java</span></li>
-        </ul>
+          <p>
+          I'm a first year Computer Science student at the University of Warsaw and a self-taught web developer currently located in Warsaw. I enjoy learning about new technologies and have passion for programming. I also love cycling, watching movies and playing on the piano.
+          </p>
+          <h1 class="subtitle">Technologies</h1>
+          <div id="tech">
+            <div class="tech-item"><i class="fab fa-html5 fa-2x"></i>
+              <span class="icon-title">HTML</span></div>
+            <div class="tech-item"><i class="fab fa-css3-alt fa-2x"></i>
+              <span class="icon-title">CSS</span></div>
+            <div class="tech-item"><i class="fab fa-sass fa-2x"></i>
+              <span class="icon-title">Sass</span></div>
+            <div class="tech-item"><i class="fab fa-js-square fa-2x"></i>
+              <span class="icon-title">JavaScript</span></div>
+            <div class="tech-item"><i class="fab fa-react fa-2x"></i>
+              <span class="icon-title">React.js</span></div>
+            <div class="tech-item"><i class="fab fa-node fa-2x"></i>
+              <span class="icon-title">Node.js</span></div>
+            <div class="tech-item"><i class="fab fa-python fa-2x"></i>
+              <span class="icon-title">Python</span></div>
+            <div class="tech-item"><i class="fab fa-java fa-2x"></i>
+              <span class="icon-title">Java</span></div>
+          </div>
         </div>
       </div>
       <div id="projects">
@@ -202,28 +202,35 @@
       </div>
     </article>
     <nav id="nav">
-      <ul>
-        <li><a href="#home">
-          <span class="icon"><i class="fas fa-home fa-2x icon-dark-mode"></i></span>
-          <span class="icon-title">Home</span>
-        </a></li>
-        <li><a href="#about">
-          <span class="icon"><i class="fas fa-info-circle fa-2x icon-dark-mode"></i></span>
-          <span class="icon-title">About Me</span>
-        </a></li>
-        <li><a href="#projects">
-          <span class="icon"><i class="fas fa-archive fa-2x icon-dark-mode"></i></span>
-          <span class="icon-title">Projects</span>
-        </a></li>
-        <li><a href="#contact">
-          <span class="icon"><i class="fas fa-phone fa-2x icon-dark-mode"></i></span>
-          <span class="icon-title">Contact</span>
-        </a></li>
-        <li><a href="./documents/CV_Jakub_Korzeniewski.docx" download>
-          <span class="icon"><i class="far fa-address-card fa-2x icon-dark-mode"></i></span>
-          <span class="icon-title">CV</span>
-        </a></li>
-      </ul> 
+      <div id="hamburger" onClick="handleMenu()">
+        <div id="top"></div>
+        <div id="middle"></div>
+        <div id="bottom"></div>
+      </div>
+      <div id="box">
+        <ul>
+          <li><a href="#home">
+            <span class="icon"><i class="fas fa-home fa-2x icon-dark-mode"></i></span>
+            <span class="icon-title">Home</span>
+          </a></li>
+          <li><a href="#about">
+            <span class="icon"><i class="fas fa-info-circle fa-2x icon-dark-mode"></i></span>
+            <span class="icon-title">About Me</span>
+          </a></li>
+          <li><a href="#projects">
+            <span class="icon"><i class="fas fa-archive fa-2x icon-dark-mode"></i></span>
+            <span class="icon-title">Projects</span>
+          </a></li>
+          <li><a href="#contact">
+            <span class="icon"><i class="fas fa-phone fa-2x icon-dark-mode"></i></span>
+            <span class="icon-title">Contact</span>
+          </a></li>
+          <li><a href="./documents/CV_Jakub_Korzeniewski.docx" download>
+            <span class="icon"><i class="far fa-address-card fa-2x icon-dark-mode"></i></span>
+            <span class="icon-title">CV</span>
+          </a></li>
+        </ul>
+      </div>
     </nav>
 
     <footer>

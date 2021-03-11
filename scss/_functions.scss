@@ -6,6 +6,10 @@
   @return map-get($font-sizes, $font-size);
 }
 
+@function color($color-name) {
+  @return var(--#{$color-name}-color);
+}
+
 @keyframes strike {
   from {
     text-decoration-color: transparent;

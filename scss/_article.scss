@@ -27,8 +27,8 @@ article {
   }
 
   .title {
-    font-weight: getWeight('title');
-    font-size: getSize('large');
+    font-weight: getWeight('max');
+    font-size: 30px;
     padding: 8vh;
     opacity: 0;
     transform: translateX(-30px);
@@ -48,22 +48,24 @@ article {
   #home {
     display: inline-block;
     width: 100%;
-
     #name {
       display: inline-block;
-      margin: 10% 0 30% 10%;
+      float: none;
+      text-align: center;
+      margin-top: 10%;
+
       h1 {
         float: left;
         text-align: left;
         font-weight: getWeigth('bold');
-        font-size: 5.5vw;
+        font-size: calc(40px + (80-40) * ((100vw - 300px) / (1600 - 300)));
         animation: 1s linear 0s 1 slideIn;
       }
       h3 {
         text-align: left;
         font-weight: getWeight('regular');
         text-decoration: underline;
-        font-size: 2vw;
+        font-size: calc(25px + (60-25) * ((100vw - 300px) / (1600 - 300)));
         animation: 1.5s linear 0s 1 slideInRight;
       }
       #scroller {
@@ -74,37 +76,34 @@ article {
         animation: 1.3s ease-in 0s 1 fadeIn;
       }
     }
+
     img {
       animation: 1.3s ease-in 0s 1 fadeIn;
     }
+
     #profile {
-      border-radius: 50%;
-      float: right;
-      padding-top: 5%;
-      padding-right: 10%;
-      width: 40%;
+      display: none;
     }
   }
 
   #about {
     #tech {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-evenly;
-      list-style-type: none;
       font-size: 25px;
       margin: 30px 0 30px 0;
 
-      li {
-        display: inline-block;
-        position: relative;
+      .tech-item {
         transition: all 0.3s ease-out;
+        margin: 15px 10px 0 10px;
 
         span.icon-title {
-          color: $text-color;
+          color: color(text);
           display: none;
         }
       }
-      li:hover {
+      .tech-item:hover {
         transform: scale(1.2);
 
         span.icon-title {
@@ -225,7 +224,7 @@ article {
         }
 
         span.icon-title {
-          color: $text-color;
+          color: color(text);
           display: none;
         }
       }
@@ -236,7 +235,7 @@ article {
     }
     ul li:hover {
       opacity: 1;
-      transform: scale(1.5);
+      transform: scale(1.2);
 
       span.icon-title {
         display: block;
@@ -247,18 +246,32 @@ article {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1360px) {
   article {
     #home {
       #name {
-        float: none;
-        text-align: center;
-        margin: auto;
-        margin-top: 10%;
+        margin: 10% 0 30% 10%;
+
+        h1 {
+          font-size: 5.5vw;
+        }
+        h3 {
+          font-size: 2vw;
+        }
       }
+
       #profile {
-        display: none;
+        display: block;
+        border-radius: 50%;
+        float: right;
+        padding-top: 5%;
+        padding-right: 10%;
+        width: 40%;
       }
+    }
+
+    .title {
+      font-size: 2.48vw;
     }
   }
 }

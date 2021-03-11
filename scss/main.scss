@@ -6,17 +6,16 @@
 @import './article';
 
 body {
-  background-color: $primary-color;
-  color: $text-color;
+  background-color: color(bg);
+  color: color(text);
   font-family: $font;
-  font-size: getSize('regular');
+  font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
-
 main {
   display: grid;
   grid-template-areas:
-    'topbar topbar'
-    'navbar content'
+    'navbar topbar'
+    'content content'
     'footer footer';
   grid-template-columns: 50px auto;
   grid-template-rows: 50px auto 50px;
@@ -25,6 +24,7 @@ main {
 footer {
   grid-area: footer;
   font-style: italic;
+  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@ footer {
   height: 5vw;
   width: 5vw;
   border-style: solid;
-  border-color: white;
+  border-color: color(text);
   border-width: 0px 1px 1px 0px;
   transform: rotate(45deg);
   transition: border-width 150ms ease-in-out;
@@ -47,23 +47,19 @@ footer {
   border-right-width: 4px;
 }
 
-.arrow-light-mode {
-  border-color: darken(white, 100%) !important;
-}
-
-.light-mode {
-  background-color: lighten($primary-color, 100%) !important;
-  color: darken($text-color, 100%) !important;
-}
-
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1360px) {
   main {
+    font-size: 16px;
+    display: grid;
     grid-template-areas:
-      'topbar'
-      'navbar'
-      'content'
-      'footer';
-    grid-template-columns: auto;
-    grid-template-rows: 50px 60px auto 50px;
+      'topbar topbar'
+      'navbar content'
+      'footer footer';
+    grid-template-columns: 50px auto;
+    grid-template-rows: 50px auto 50px;
+  }
+
+  footer {
+    font-size: 16px;
   }
 }

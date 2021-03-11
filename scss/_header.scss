@@ -4,24 +4,15 @@ header {
   grid-area: topbar;
   display: flex;
   justify-content: space-between;
-  background-color: $primary-color;
+  background-color: color(bg);
   align-items: center;
   padding: 1% 2% 0 2%;
   transition: top 0.3s;
   z-index: 999;
   animation: 3s linear 0s 1 longFadeIn;
-  p {
-    letter-spacing: 4pt;
-    transition: all 0.5s linear;
-  }
-
-  p:hover {
-    color: blue;
-    transform: scale(1.1);
-  }
 
   #logo {
-    transform: translateX(50px);
+    display: none;
   }
 
   ul {
@@ -33,7 +24,7 @@ header {
     margin: 10px;
 
     a {
-      color: $text-color;
+      color: color(text);
       text-decoration: none;
 
       img {
@@ -49,14 +40,31 @@ header {
   #theme-switch {
     border: none;
     text-decoration: none;
-    background-color: $primary-color;
-    color: $text-color;
+    background-color: color(bg);
+    color: color(text);
 
     cursor: pointer;
   }
   #theme-switch:hover {
     text-decoration: line-through;
-    color: darken($text-color, 50%);
+    opacity: 0.5;
     animation: strike 0.25s ease-out;
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  header {
+    font-size: 16px;
+
+    #logo {
+      display: block;
+      letter-spacing: 4pt;
+      transform: translateX(50px);
+      transition: all 0.5s linear;
+    }
+
+    #logo:hover {
+      color: blue;
+    }
   }
 }

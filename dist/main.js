@@ -1,7 +1,7 @@
 // Controller for ScrollMagic library
 var controller = new ScrollMagic.Controller();
 
-// Hiding header (and navbar in tablet view) on scrolling
+// Hiding header on scrolling
 let prevScrollPos = window.pageYOffset;
 window.onscroll = function() {
     let curScrollPos = window.pageYOffset;  // current position
@@ -9,14 +9,6 @@ window.onscroll = function() {
         document.getElementById("header").style.top = 0;
     } else {
         document.getElementById("header").style.top = "-50px";
-    }
-
-    if (window.innerWidth <= 1024) {
-        if (prevScrollPos > curScrollPos) {
-            document.getElementById("nav").style.top = "60px";
-        } else {
-            document.getElementById("nav").style.top = "-110px";
-        }   
     }
 
     prevScrollPos = curScrollPos;   // update previous position
@@ -62,24 +54,16 @@ function toggleDarkMode() {
     if(document.body.classList.contains("light-mode")) {        
         btn.innerHTML = "LIGHT-THEME";                          
         localStorage.setItem("theme", "dark-mode");
+        document.documentElement.style.setProperty("--bg-color", "#272727");
+        document.documentElement.style.setProperty("--text-color", "white");
     } else {
         btn.innerHTML = "DARK-THEME";
         localStorage.setItem("theme", "light-mode");
+        document.documentElement.style.setProperty("--bg-color", "white");
+        document.documentElement.style.setProperty("--text-color", "#272727");
     }
 
-    // Toggling CSS classes for various DOM elements 
     document.body.classList.toggle("light-mode");
-    btn.classList.toggle("light-mode");
-    document.getElementById("arrow").classList.toggle("arrow-light-mode");
-    document.getElementById("header").classList.toggle("light-mode");
-    let icons = document.getElementsByClassName("icon-dark-mode");
-    for(let i = 0; i < icons.length; i++) {
-        icons[i].classList.toggle("icon-light-mode");
-    }
-    let iconTitles = document.getElementsByClassName("icon-title");
-    for(let i = 0; i < iconTitles.length; i++) {
-        iconTitles[i].classList.toggle("icon-light-mode");
-    }
 }
 
 // Changes theme on load from default if needed 
@@ -117,3 +101,8 @@ function setText(val, id) {
 
     text.innerHTML = val;
 }
+
+function handleMenu() {
+    document.getElementById('box').classList.toggle('active');
+    document.getElementById('hamburger').classList.toggle('active');
+};
