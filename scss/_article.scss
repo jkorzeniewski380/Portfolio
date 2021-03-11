@@ -17,13 +17,11 @@ article {
 
   .content {
     opacity: 0;
-    transform: translateX(30px);
     transition: all 1s ease-out;
   }
 
   .content_animated {
     opacity: 1;
-    transform: none;
   }
 
   .title {
@@ -31,13 +29,11 @@ article {
     font-size: 30px;
     padding: 8vh;
     opacity: 0;
-    transform: translateX(-30px);
     transition: all 1s ease-out;
   }
 
   .title_animated {
     opacity: 1;
-    transform: none;
   }
 
   .subtitle {
@@ -130,7 +126,7 @@ article {
         transition: all 0.3s ease-out;
         text-align: justify;
         width: 100%;
-        margin: 30px;
+        margin: 30px 0;
 
         img {
           display: block;
@@ -248,6 +244,22 @@ article {
 
 @media only screen and (min-width: 1360px) {
   article {
+    .content {
+      transform: translateX(30px);
+    }
+
+    .content_animated {
+      transform: none;
+    }
+
+    .title {
+      transform: translateX(-30px);
+    }
+
+    .title_animated {
+      transform: none;
+    }
+
     #home {
       #name {
         margin: 10% 0 30% 10%;
@@ -267,6 +279,14 @@ article {
         padding-top: 5%;
         padding-right: 10%;
         width: 40%;
+      }
+    }
+
+    #projects {
+      #project-list {
+        li {
+          margin: 30px;
+        }
       }
     }
 
