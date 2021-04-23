@@ -186,6 +186,11 @@ header #logo {
 }
 
 header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   list-style-type: none;
 }
 
@@ -263,6 +268,7 @@ header #theme-switch:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: var(--bg-color);
 }
 
 #nav #hamburger {
@@ -636,6 +642,7 @@ article #projects #project-list li .button {
   color: #272727;
   padding: 3% 0;
   width: 6.5em;
+  margin: 0 10px;
   background-color: rgba(255, 204, 203, 0.5);
   border-radius: 5%;
   -webkit-transition: all 0.25s ease-out;
@@ -650,6 +657,7 @@ article #projects #project-list li .button:hover {
 article #projects #project-list .project-title {
   text-align: center;
   padding: 3% 0 3% 0;
+  margin: 0 10px;
 }
 
 article #projects #project-list .project-description {
@@ -679,10 +687,6 @@ article #projects #project-list .project-technologies li {
 article #projects #project-list .project-technologies li:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-}
-
-article #projects #project-list:hover li {
-  opacity: 0.1;
 }
 
 article #projects #project-list li:hover {
@@ -738,6 +742,12 @@ article #contact ul li:hover span.icon-title {
   font-weight: bold;
 }
 
+@media only screen and (min-width: 380px) {
+  article #projects #project-list li {
+    margin: 30px;
+  }
+}
+
 @media only screen and (min-width: 1360px) {
   article #home {
     -webkit-box-pack: justify;
@@ -761,8 +771,11 @@ article #contact ul li:hover span.icon-title {
     width: 40%;
     height: 40%;
   }
-  article #projects #project-list li {
-    margin: 30px;
+  article #projects #project-list:hover li {
+    opacity: 0.1;
+  }
+  article #projects #project-list li:hover {
+    opacity: 1;
   }
   article .title {
     font-size: 2.48vw;

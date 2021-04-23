@@ -1,247 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" type="image/png" href="./icons/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/833faa39c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jakub Korzeniewski</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <link rel="icon" type="image/png" href="./icons/favicon.png">
-  <script src="https://kit.fontawesome.com/833faa39c4.js" crossorigin="anonymous"></script>
-  <title>Jakub Korzeniewski</title>
-</head>
+  <body onload="changeThemeOnLoad()">
+    <main>
+      <header id="header">
+        <button id="theme-switch" onclick="toggleDarkMode()">
+          LIGHT THEME
+        </button>
+        <p id="logo">JKorzeniewski</p>
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/kuba.korzeniewski.3/"
+              target="_blank"
+              ><img src="./icons/facebook.webp" alt="F"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jakub-korzeniewski-044154161/"
+              target="_blank"
+              ><img src="./icons/in.webp" alt="In"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/jkorzeniewski380" target="_blank"
+              ><img src="./icons/github.webp" alt="GH"
+            /></a>
+          </li>
+        </ul>
+      </header>
 
-<body onload = "changeThemeOnLoad()">
-  <main>
-    <header id="header">
-      <button id='theme-switch' onclick="toggleDarkMode()">LIGHT THEME</button>
-      <p id="logo">JKorzeniewski</p>
-      <ul>
-        <li><a href="https://www.facebook.com/kuba.korzeniewski.3/" target="_blank"><img src="./icons/facebook.webp" alt="F"></a></li>
-        <li><a href="https://www.linkedin.com/in/jakub-korzeniewski-044154161/" target="_blank"><img src="./icons/in.webp" alt="In"></a></li>
-        <li><a href="https://github.com/jkorzeniewski380?tab=repositories" target="_blank"><img src="./icons/github.webp" alt="GH"></a></li>
-      </ul>
-    </header>
-
-    <article>
-      <div id="home">
-        <div id="name">
-        <h1 >Jakub <br> Korzeniewski</h1>
-        <h3>Web Developer</h3>
-        <a href="#about" id='scroller'><div id="arrow"></div></a>
-        </div>        
-        <img src="./photos/profile.jpg" alt="Error404" id="profile">
-      </div>
-      <div id="about">
-        <h1 class="title">About me</h1>
-        <div class="content">
-          <p>
-          I'm a first year Computer Science student at the University of Warsaw and a self-taught web developer currently located in Warsaw. I enjoy learning about new technologies and have passion for programming. I also love cycling, watching movies and playing on the piano.
-          </p>
-          <h1 class="subtitle">Technologies</h1>
-          <div id="tech">
-            <div class="tech-item"><i class="fab fa-html5 fa-2x"></i>
-              <span class="icon-title">HTML</span></div>
-            <div class="tech-item"><i class="fab fa-css3-alt fa-2x"></i>
-              <span class="icon-title">CSS</span></div>
-            <div class="tech-item"><i class="fab fa-sass fa-2x"></i>
-              <span class="icon-title">Sass</span></div>
-            <div class="tech-item"><i class="fab fa-js-square fa-2x"></i>
-              <span class="icon-title">JavaScript</span></div>
-            <div class="tech-item"><i class="fab fa-react fa-2x"></i>
-              <span class="icon-title">React.js</span></div>
-            <div class="tech-item"><i class="fab fa-node fa-2x"></i>
-              <span class="icon-title">Node.js</span></div>
-            <div class="tech-item"><i class="fab fa-python fa-2x"></i>
-              <span class="icon-title">Python</span></div>
-            <div class="tech-item"><i class="fab fa-java fa-2x"></i>
-              <span class="icon-title">Java</span></div>
+      <article>
+        <div id="home">
+          <div id="name">
+            <h1>
+              Jakub <br />
+              Korzeniewski
+            </h1>
+            <h3>Web Developer</h3>
+            <a href="#about" id="scroller"><div id="arrow"></div></a>
+          </div>
+          <img src="./photos/profile.jpg" alt="Error404" id="profile" />
+        </div>
+        <div id="about">
+          <h1 class="title">About me</h1>
+          <div class="content">
+            <p>
+              I'm a first year Computer Science student at the University of
+              Warsaw and a self-taught web developer currently located in
+              Warsaw. I enjoy learning about new technologies and have passion
+              for programming. I also love cycling, watching movies and playing
+              on the piano.
+            </p>
+            <h1 class="subtitle">Technologies</h1>
+            <div id="tech">
+              <div class="tech-item">
+                <i class="fab fa-html5 fa-2x"></i>
+                <span class="icon-title">HTML</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-css3-alt fa-2x"></i>
+                <span class="icon-title">CSS</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-sass fa-2x"></i>
+                <span class="icon-title">Sass</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-js-square fa-2x"></i>
+                <span class="icon-title">JavaScript</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-react fa-2x"></i>
+                <span class="icon-title">React.js</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-node fa-2x"></i>
+                <span class="icon-title">Node.js</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-python fa-2x"></i>
+                <span class="icon-title">Python</span>
+              </div>
+              <div class="tech-item">
+                <i class="fab fa-java fa-2x"></i>
+                <span class="icon-title">Java</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="projects">
-        <h1 class="title">Projects</h1>
-        <div class="content">
-          <ul id="project-list">
-            <li class="project">
-                <img src="./photos/preview.png" alt="">
-                <h3 class="project-title">Portfolio</h3>
+        <div id="projects">
+          <h1 class="title">Projects</h1>
+          <div class="content">
+            <ul id="project-list">
+              <li class="project">
+                <img src="./photos/preview_movicker.png" alt="" />
+                <h3 class="project-title">Movicker - the Movie Picker</h3>
                 <div class="buttons">
-                <a href="https://github.com/jkorzeniewski380/Portfolio" target="_blank" class="button">Code</a>
-                <a href="https://students.mimuw.edu.pl/~jk429337/" target="_blank" class="button">Link</a>
+                  <a
+                    href="https://github.com/jkorzeniewski380/movicker"
+                    target="_blank"
+                    class="button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://movicker.herokuapp.com"
+                    target="_blank"
+                    class="button"
+                    >Link</a
+                  >
                 </div>
-                <p class="project-description">My portfolio website</p>
-                <p class="project-description" style="font-weight: bold;">Technologies:</p>
+                <p class="project-description">
+                  A MERN stack app for searching movies hosted on heroku.
+                </p>
+                <p class="project-description" style="font-weight: bold">
+                  Technologies:
+                </p>
                 <ul class="project-technologies">
-                  <li><i class="fab fa-html5 fa-2x"></i></li>
-                  <li><i class="fab fa-sass fa-2x"></i></li>
-                  <li><i class="fab fa-js-square fa-2x"></i></li>
+                  <li><i class="fab fa-react fa-2x"></i></li>
+                  <li><i class="fab fa-node fa-2x"></i></li>
+                  <li><i class="fab fa-css3-alt fa-2x"></i></li>
                 </ul>
-            </li>
-            <li class="project">
-                <img src="./photos/preview_todo.png" alt="">
+              </li>
+              <li class="project">
+                <img src="./photos/preview_todo.png" alt="" />
                 <h3 class="project-title">Todo-list PWA</h3>
                 <div class="buttons">
-                <a href="https://github.com/jkorzeniewski380/React-ToDo-PWA" target="_blank" class="button">Code</a>
-                <a href="https://jkorzeniewski380.github.io/React-ToDo-PWA/" target="_blank" class="button">Link</a>
+                  <a
+                    href="https://github.com/jkorzeniewski380/React-ToDo-PWA"
+                    target="_blank"
+                    class="button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://jkorzeniewski380.github.io/React-ToDo-PWA/"
+                    target="_blank"
+                    class="button"
+                    >Link</a
+                  >
                 </div>
-                <p class="project-description">Simple todo-list PWA made using React and IndexedDB</p>
-                <p class="project-description" style="font-weight: bold;">Technologies:</p>
+                <p class="project-description">
+                  Simple todo-list PWA made using React and IndexedDB
+                </p>
+                <p class="project-description" style="font-weight: bold">
+                  Technologies:
+                </p>
                 <ul class="project-technologies">
                   <li><i class="fab fa-html5 fa-2x"></i></li>
                   <li><i class="fab fa-css3-alt fa-2x"></i></li>
                   <li><i class="fab fa-react fa-2x"></i></li>
                 </ul>
-            </li>
-            <li class="project">
-              <img src="./photos/preview.png" alt="">
-              <h3 class="project-title">Portfolio</h3>
-              <div class="buttons">
-              <a href="https://github.com/jkorzeniewski380?tab=projects" target="_blank" class="button">Code</a>
-              <a href="https://students.mimuw.edu.pl/~jk429337/" target="_blank" class="button">Link</a>
-              </div>
-              <p class="project-description">My portfolio website</p>
-              <p class="project-description" style="font-weight: bold;">Technologies:</p>
-              <ul class="project-technologies">
-                <li><i class="fab fa-html5 fa-2x"></i></li>
-                <li><i class="fab fa-sass fa-2x"></i></li>
-                <li><i class="fab fa-js-square fa-2x"></i></li>
-              </ul>
-          </li>
-          <li class="project">
-              <img src="./photos/preview.png" alt="">
-              <h3 class="project-title">Portfolio</h3>
-              <div class="buttons">
-              <a href="https://github.com/jkorzeniewski380?tab=projects" target="_blank" class="button">Code</a>
-              <a href="https://students.mimuw.edu.pl/~jk429337/" target="_blank" class="button">Link</a>
-              </div>
-              <p class="project-description">My portfolio website</p>
-              <p class="project-description" style="font-weight: bold;">Technologies:</p>
-              <ul class="project-technologies">
-                <li><i class="fab fa-html5 fa-2x"></i></li>
-                <li><i class="fab fa-sass fa-2x"></i></li>
-                <li><i class="fab fa-js-square fa-2x"></i></li>
-              </ul>
-            </li>
-            <li class="project">
-              <img src="./photos/preview.png" alt="">
-              <h3 class="project-title">Portfolio</h3>
-              <div class="buttons">
-              <a href="https://github.com/jkorzeniewski380?tab=projects" target="_blank" class="button">Code</a>
-              <a href="https://students.mimuw.edu.pl/~jk429337/" target="_blank" class="button">Link</a>
-              </div>
-              <p class="project-description">My portfolio website</p>
-              <p class="project-description" style="font-weight: bold;">Technologies:</p>
-              <ul class="project-technologies">
-                <li><i class="fab fa-html5 fa-2x"></i></li>
-                <li><i class="fab fa-sass fa-2x"></i></li>
-                <li><i class="fab fa-js-square fa-2x"></i></li>
-              </ul>
-          </li>
-          <li class="project">
-              <img src="./photos/preview.png" alt="">
-              <h3 class="project-title">Portfolio</h3>
-              <div class="buttons">
-              <a href="https://github.com/jkorzeniewski380?tab=projects" target="_blank" class="button">Code</a>
-              <a href="https://students.mimuw.edu.pl/~jk429337/" target="_blank" class="button">Link</a>
-              </div>
-              <p class="project-description">My portfolio website</p>
-              <p class="project-description" style="font-weight: bold;">Technologies:</p>
-              <ul class="project-technologies">
-                <li><i class="fab fa-html5 fa-2x"></i></li>
-                <li><i class="fab fa-sass fa-2x"></i></li>
-                <li><i class="fab fa-js-square fa-2x"></i></li>
-              </ul>
-          </li>
-          <li class="project">
-            <img src="./photos/preview.png" alt="">
-            <h3 class="project-title">Portfolio</h3>
-            <div class="buttons">
-            <a href="https://github.com/jkorzeniewski380?tab=projects" target="_blank" class="button">Code</a>
-            <a href="https://students.mimuw.edu.pl/~jk429337/" target="_blank" class="button">Link</a>
-            </div>
-            <p class="project-description">My portfolio website</p>
-            <p class="project-description" style="font-weight: bold;">Technologies:</p>
-            <ul class="project-technologies">
-              <li><i class="fab fa-html5 fa-2x"></i></li>
-              <li><i class="fab fa-sass fa-2x"></i></li>
-              <li><i class="fab fa-js-square fa-2x"></i></li>
+              </li>
+              <li class="project">
+                <img src="./photos/preview.png" alt="" />
+                <h3 class="project-title">Portfolio</h3>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/jkorzeniewski380?tab=projects"
+                    target="_blank"
+                    class="button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://students.mimuw.edu.pl/~jk429337/"
+                    target="_blank"
+                    class="button"
+                    >Link</a
+                  >
+                </div>
+                <p class="project-description">My portfolio website</p>
+                <p class="project-description" style="font-weight: bold">
+                  Technologies:
+                </p>
+                <ul class="project-technologies">
+                  <li><i class="fab fa-html5 fa-2x"></i></li>
+                  <li><i class="fab fa-sass fa-2x"></i></li>
+                  <li><i class="fab fa-js-square fa-2x"></i></li>
+                </ul>
+              </li>
+              <li class="project">
+                <img src="./photos/preview_npm.png" alt="" />
+                <h3 class="project-title">Navigation menu</h3>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/jkorzeniewski380?tab=projects"
+                    target="_blank"
+                    class="button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://students.mimuw.edu.pl/~jk429337/"
+                    target="_blank"
+                    class="button"
+                    >Link</a
+                  >
+                </div>
+                <p class="project-description">NPM Navigation menu package</p>
+                <p class="project-description" style="font-weight: bold">
+                  Technologies:
+                </p>
+                <ul class="project-technologies">
+                  <li><i class="fab fa-react fa-2x"></i></li>
+                  <li><i class="fab fa-css3-alt fa-2x"></i></li>
+                  <li><i class="fab fa-npm fa-2x"></i></li>
+                </ul>
+              </li>
+              <li class="project">
+                <img src="./photos/preview.png" alt="" />
+                <h3 class="project-title">Portfolio</h3>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/jkorzeniewski380/custom-menu"
+                    target="_blank"
+                    class="button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://www.npmjs.com/package/custom-menu"
+                    target="_blank"
+                    class="button"
+                    >Link</a
+                  >
+                </div>
+                <p class="project-description">My portfolio website</p>
+                <p class="project-description" style="font-weight: bold">
+                  Technologies:
+                </p>
+                <ul class="project-technologies">
+                  <li><i class="fab fa-html5 fa-2x"></i></li>
+                  <li><i class="fab fa-sass fa-2x"></i></li>
+                  <li><i class="fab fa-js-square fa-2x"></i></li>
+                </ul>
+              </li>
+              <li class="project">
+                <img src="./photos/preview.png" alt="" />
+                <h3 class="project-title">Portfolio</h3>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/jkorzeniewski380?tab=projects"
+                    target="_blank"
+                    class="button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://students.mimuw.edu.pl/~jk429337/"
+                    target="_blank"
+                    class="button"
+                    >Link</a
+                  >
+                </div>
+                <p class="project-description">My portfolio website</p>
+                <p class="project-description" style="font-weight: bold">
+                  Technologies:
+                </p>
+                <ul class="project-technologies">
+                  <li><i class="fab fa-html5 fa-2x"></i></li>
+                  <li><i class="fab fa-sass fa-2x"></i></li>
+                  <li><i class="fab fa-js-square fa-2x"></i></li>
+                </ul>
+              </li>
+              <li class="project">
+                <img src="./photos/preview.png" alt="" />
+                <h3 class="project-title">Portfolio</h3>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/jkorzeniewski380?tab=projects"
+                    target="_blank"
+                    class="button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://students.mimuw.edu.pl/~jk429337/"
+                    target="_blank"
+                    class="button"
+                    >Link</a
+                  >
+                </div>
+                <p class="project-description">My portfolio website</p>
+                <p class="project-description" style="font-weight: bold">
+                  Technologies:
+                </p>
+                <ul class="project-technologies">
+                  <li><i class="fab fa-html5 fa-2x"></i></li>
+                  <li><i class="fab fa-sass fa-2x"></i></li>
+                  <li><i class="fab fa-js-square fa-2x"></i></li>
+                </ul>
+              </li>
+              <li class="project">
+                <img src="./photos/preview.png" alt="" />
+                <h3 class="project-title">Portfolio</h3>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/jkorzeniewski380?tab=projects"
+                    target="_blank"
+                    class="button"
+                    >Code</a
+                  >
+                  <a
+                    href="https://students.mimuw.edu.pl/~jk429337/"
+                    target="_blank"
+                    class="button"
+                    >Link</a
+                  >
+                </div>
+                <p class="project-description">My portfolio website</p>
+                <p class="project-description" style="font-weight: bold">
+                  Technologies:
+                </p>
+                <ul class="project-technologies">
+                  <li><i class="fab fa-html5 fa-2x"></i></li>
+                  <li><i class="fab fa-sass fa-2x"></i></li>
+                  <li><i class="fab fa-js-square fa-2x"></i></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-          <li class="project">
-              <img src="./photos/preview.png" alt="">
-              <h3 class="project-title">Portfolio</h3>
-              <div class="buttons">
-              <a href="https://github.com/jkorzeniewski380?tab=projects" target="_blank" class="button">Code</a>
-              <a href="https://students.mimuw.edu.pl/~jk429337/" target="_blank" class="button">Link</a>
-              </div>
-              <p class="project-description">My portfolio website</p>
-              <p class="project-description" style="font-weight: bold;">Technologies:</p>
-              <ul class="project-technologies">
-                <li><i class="fab fa-html5 fa-2x"></i></li>
-                <li><i class="fab fa-sass fa-2x"></i></li>
-                <li><i class="fab fa-js-square fa-2x"></i></li>
-              </ul>
+          </div>
+        </div>
+        <div id="contact">
+          <h1 class="title">Contact Me!</h1>
+          <div class="content">
+            <ul>
+              <li>
+                <i
+                  class="fas fa-phone fa-3x"
+                  onclick="alertAndCopy('number')"
+                  onmouseout="setText('+48 668 568 558', 'number')"
+                ></i>
+                <span class="icon-title" id="number">+48 668 568 558</span>
+              </li>
+              <li>
+                <i
+                  class="fas fa-at fa-3x"
+                  onclick="alertAndCopy('mail')"
+                  onmouseout="setText('jakubkorzeniewski1707@gmail.com', 'mail')"
+                ></i>
+                <span class="icon-title" id="mail"
+                  >jakubkorzeniewski1707@gmail.com</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <nav id="nav">
+        <div id="hamburger" onClick="handleMenu()">
+          <div id="top"></div>
+          <div id="middle"></div>
+          <div id="bottom"></div>
+        </div>
+        <div id="box">
+          <ul>
+            <li>
+              <a href="#home">
+                <span class="icon"
+                  ><i class="fas fa-home fa-2x icon-dark-mode"></i
+                ></span>
+                <span class="icon-title">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                <span class="icon"
+                  ><i class="fas fa-info-circle fa-2x icon-dark-mode"></i
+                ></span>
+                <span class="icon-title">About Me</span>
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                <span class="icon"
+                  ><i class="fas fa-archive fa-2x icon-dark-mode"></i
+                ></span>
+                <span class="icon-title">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <span class="icon"
+                  ><i class="fas fa-phone fa-2x icon-dark-mode"></i
+                ></span>
+                <span class="icon-title">Contact</span>
+              </a>
+            </li>
+            <li>
+              <a href="./documents/CV_Jakub_Korzeniewski.docx" download>
+                <span class="icon"
+                  ><i class="far fa-address-card fa-2x icon-dark-mode"></i
+                ></span>
+                <span class="icon-title">CV</span>
+              </a>
             </li>
           </ul>
         </div>
-      </div>
-      <div id="contact">
-        <h1 class="title">Contact Me!</h1>
-        <div class="content">
-        <ul>
-          <li>
-            <i class="fas fa-phone fa-3x" onclick="alertAndCopy('number')" onmouseout="setText('+48 668 568 558', 'number')"></i>
-            <span class="icon-title" id="number">+48 668 568 558</span>
-          </li>
-          <li>
-            <i class="fas fa-at fa-3x" onclick="alertAndCopy('mail')" onmouseout="setText('jakubkorzeniewski1707@gmail.com', 'mail')"></i>
-            <span class="icon-title" id="mail">jakubkorzeniewski1707@gmail.com</span>
-          </li>
-        </ul>
-        </div>
-      </div>
-    </article>
-    <nav id="nav">
-      <div id="hamburger" onClick="handleMenu()">
-        <div id="top"></div>
-        <div id="middle"></div>
-        <div id="bottom"></div>
-      </div>
-      <div id="box">
-        <ul>
-          <li><a href="#home">
-            <span class="icon"><i class="fas fa-home fa-2x icon-dark-mode"></i></span>
-            <span class="icon-title">Home</span>
-          </a></li>
-          <li><a href="#about">
-            <span class="icon"><i class="fas fa-info-circle fa-2x icon-dark-mode"></i></span>
-            <span class="icon-title">About Me</span>
-          </a></li>
-          <li><a href="#projects">
-            <span class="icon"><i class="fas fa-archive fa-2x icon-dark-mode"></i></span>
-            <span class="icon-title">Projects</span>
-          </a></li>
-          <li><a href="#contact">
-            <span class="icon"><i class="fas fa-phone fa-2x icon-dark-mode"></i></span>
-            <span class="icon-title">Contact</span>
-          </a></li>
-          <li><a href="./documents/CV_Jakub_Korzeniewski.docx" download>
-            <span class="icon"><i class="far fa-address-card fa-2x icon-dark-mode"></i></span>
-            <span class="icon-title">CV</span>
-          </a></li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
 
-    <footer>
-      <p>Jakub Korzeniewski &#169 2020-2021 ALL RIGHTS RESERVED</p>
-    </footer>
-  </main>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src ="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-  <script src='main.js'></script>
-</body>
+      <footer>
+        <p>Jakub Korzeniewski &#169;</p>
+      </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

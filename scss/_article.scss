@@ -154,6 +154,7 @@ article {
           color: #272727;
           padding: 3% 0;
           width: 6.5em;
+          margin: 0 10px;
           background-color: rgba(255, 204, 203, 0.5);
           border-radius: 5%;
           transition: all 0.25s ease-out;
@@ -167,6 +168,7 @@ article {
       .project-title {
         text-align: center;
         padding: 3% 0 3% 0;
+        margin: 0 10px;
       }
 
       .project-description {
@@ -190,10 +192,6 @@ article {
           transform: scale(1.5);
         }
       }
-    }
-
-    #project-list:hover li {
-      opacity: 0.1;
     }
 
     #project-list li:hover {
@@ -245,6 +243,18 @@ article {
   }
 }
 
+@media only screen and (min-width: 380px) {
+  article {
+    #projects {
+      #project-list {
+        li {
+          margin: 30px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1360px) {
   article {
     #home {
@@ -272,10 +282,12 @@ article {
     }
 
     #projects {
-      #project-list {
-        li {
-          margin: 30px;
-        }
+      #project-list:hover li {
+        opacity: 0.1;
+      }
+
+      #project-list li:hover {
+        opacity: 1;
       }
     }
 
