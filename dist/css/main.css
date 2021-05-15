@@ -230,7 +230,7 @@ header #theme-switch:hover {
           animation: strike 0.25s ease-out;
 }
 
-@media only screen and (min-width: 1360px) {
+@media only screen and (min-width: 768px) {
   header {
     font-size: 16px;
   }
@@ -318,7 +318,7 @@ header #theme-switch:hover {
           transform: translateY(-10px) rotate(-45deg);
 }
 
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 768px) {
   #nav #box {
     position: fixed;
     display: -webkit-box;
@@ -371,7 +371,7 @@ header #theme-switch:hover {
   }
 }
 
-@media only screen and (min-width: 1360px) {
+@media only screen and (min-width: 768px) {
   #nav {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -748,7 +748,7 @@ article #contact ul li:hover span.icon-title {
   }
 }
 
-@media only screen and (min-width: 1360px) {
+@media only screen and (min-width: 768px) {
   article #home {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -838,7 +838,7 @@ footer {
   border-right-width: 4px;
 }
 
-@media only screen and (min-width: 1360px) {
+@media only screen and (min-width: 768px) {
   main {
     font-size: 16px;
     display: -ms-grid;

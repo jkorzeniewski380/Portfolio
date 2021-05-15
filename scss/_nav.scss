@@ -51,7 +51,7 @@
   }
 }
 
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 768px) {
   #nav {
     #box {
       position: fixed;
@@ -103,7 +103,7 @@
   }
 }
 
-@media only screen and (min-width: 1360px) {
+@media only screen and (min-width: 768px) {
   #nav {
     justify-content: flex-start;
     position: fixed;
